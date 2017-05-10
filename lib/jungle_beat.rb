@@ -14,6 +14,14 @@ class JungleBeat
     arg
   end
 
+  def prepend(arg)
+    separate_words = arg.split(" ")
+    separate_words.each { |word|
+      @list.prepend(word)
+    }
+    arg
+  end
+
   def play
     beats = list.to_string
     `say -r 500 -v Boing #{beats}`

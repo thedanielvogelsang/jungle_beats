@@ -85,7 +85,8 @@ class LinkedList
   end
 
   def find(int, fin)
-    @node_count[int..fin].join(" ")
+    x = (int + (fin - 1))
+    @node_count[int..x].join(" ")
   end
 
   def pop
